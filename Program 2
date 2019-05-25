@@ -1,0 +1,58 @@
+//Programme 2
+//Create a C++ Program that store temperature of Province A, Province B and Province C for a week (seven days) and display it. 
+
+//Programmer's Note: The counters for A B and C were separate for visibility reasons, otherwise, they can have the same. =3
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+	int proa[7], prob[7], proc[7]; //Arrays for data storage and later retrieval.
+	
+	string proA, proB, proC; //The names of provinces, yes you can input them. <3 [only one name per province tho] ;n;
+	int counterA, counterB, counterC, day; //The counters.
+	
+	cout << "WARNING: NAMES SUPPORT ONE WORD ONLY PER PROVINCE!"
+	cout << "Enter Province A's name: " << "\n";
+	cin >> proA;
+	cout << "=======================================================" << endl;
+	cout << "Enter Province B's name: " << "\n";
+	cin >> proB;
+	cout << "=======================================================" << endl;
+	cout << "Enter Province C's name: " << "\n";
+	cin >> proC;
+	
+	cout << "=======================================================" << endl;
+	cout << "Enter the weekly (7 days) temperature data for " << proA << ":\n";
+	for(counterA = 0; counterA <7; counterA++){
+		cin >> proa[counterA];
+	} //Enter Province A's values here, loops for a total of 7 inputs.
+	
+	cout << "=======================================================" << endl;
+	cout << "Enter the weekly (7 days) temperature data for " << proB << ":\n";
+	for(counterB = 0; counterB <7; counterB++){
+		cin >> prob[counterB];
+	} //Enter Province B's values here, loops for a total of 7 inputs.
+	
+	cout << "=======================================================" << endl;
+	cout << "Enter the weekly (7 days) temperature data for " << proA << ":\n";
+	for(counterC = 0; counterC <7; counterC++){
+		cin >> proc[counterC];
+	} //Enter Province C's values here, loops for a total of 7 inputs.
+
+	cout << "=======================================================" << endl;
+	for(counterA = 0, day = 1; counterA <7; counterA++, day++){
+		cout << proA << " Province - Day " << day << ": " << proa[counterA] << "\n";
+	} //Displays Province A's temperature data.
+	
+	cout << "=======================================================" << endl;
+	for(counterB = 0, day = 1; counterB <7; counterB++, day++){
+		cout << proB << " Province - Day " << day << ": " << prob[counterB] << "\n";
+	} //Displays Province B's temperature data.
+	
+	cout << "=======================================================" << endl;
+	for(counterC = 0, day = 1; counterC <7; counterC++, day++){
+		cout << proC << " Province - Day " << day << ": " << proc[counterC] << "\n";
+	} //Displays Province C's temperature data.
+}
