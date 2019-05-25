@@ -1,0 +1,46 @@
+//Programme 1
+//Create a C++ program to show the smallest and largest integer, the total, and the average of an array that take 10 elements only.
+
+//Programmer's Note: This is made to take a maximum of 10 elements only; hence why the array is capped at [10]. It can be modded to take more though. =3
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+	int xoian[10]; //Array for values.
+	int vmax, vmin, vsum, vave; //The outputs.
+	int counter; //The counter.
+	
+	for(counter = 0; counter <10; counter++){
+		cout << "Enter data for array value number " << counter << ":\n";
+		cin >> xoian[counter];
+	} //Enter values here, loops for a total of 10 inputs.
+	
+	vmax = xoian[0]; //Defaulted to 0.
+    for (counter = 0; counter < 10; counter++)
+    {
+        if (vmax < xoian[counter])
+            vmax = xoian[counter];
+    } //Processes values and locates the highest integer.
+    
+    vmin = xoian[0]; //Defaulted to 0.
+    for (counter = 0; counter < 10; counter++)
+    {
+        if (vmin > xoian[counter])
+            vmin = xoian[counter];
+    } //Processes values and locates the highest integer.
+    
+    cout << "=======================================================" << "\n";
+    cout << "Maxima/Maximum Value: " << "\t" << vmax << "\n";
+    cout << "Minima/Minimum Value: " << "\t" << vmin << "\n";
+	
+	for (counter = 0; counter < 10; counter++)
+    {
+        vsum += xoian[counter];
+    } //Processes values, looping the value from the first added by the previous to the other and so on.
+	cout << "Summation/Total Value: " << "\t" << vsum << "\n";
+	
+	vave = vsum/10; //Processes the average based on the sum above taken by the number of elements in the system.
+	cout << "Average/Localised Value:" << vave << "\n";
+}
